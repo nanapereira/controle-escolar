@@ -6,15 +6,43 @@
 	<display-name>ControleEscolar</display-name>
 
 	<servlet>
-		<servlet-name>cadastrar</servlet-name>
+		<servlet-name>cadastrarAluno</servlet-name>
 		<servlet-class>controller.cadastrarAlunoController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>cadastrar</servlet-name>
+		<servlet-name>cadastrarAluno</servlet-name>
 		<url-pattern>/cadastrarAluno</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>cadastrarDisciplina</servlet-name>
+		<servlet-class>controller.cadastrarDisciplinaController</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>cadastrarDisciplina</servlet-name>
+		<url-pattern>/cadastrarDisciplina</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>cadastrarMatricula</servlet-name>
+		<servlet-class>controller.cadastrarMatriculaController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cadastrarMatricula</servlet-name>
+		<url-pattern>/cadastrarMatricula</url-pattern>
+	</servlet-mapping>
+	
+			<servlet>
+		<servlet-name>cadastrarProfessor</servlet-name>
+		<servlet-class>controller.cadastrarProfessorController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cadastrarProfessor</servlet-name>
+		<url-pattern>/cadastrarProfessor</url-pattern>
+	</servlet-mapping>
 
 </web-app>

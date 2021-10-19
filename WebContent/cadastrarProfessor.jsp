@@ -19,50 +19,21 @@
 			<li><a href="cadastrarMatricula.jsp">Matrícula</a></li>
 			<li><a href="cadastrarProfessor.jsp">Professor</a></li>
 			<li><a href="consultar.jsp">Consultar</a></li>
-			
+
 		</ul>
 	</nav>
 	<main class="escolaMain">
-		<form action="cadastrarAluno" method="post" class="escolaForm">
+		<form action="cadastrarProfessor" method="post" class="escolaForm">
 			<div>
 				<label><strong>Nome:</strong></label> <input type="text"
-					name=nomeAluno>
+					name=nomeProfessor>
 			</div>
-			<div>
-				<label><strong>CPF:</strong></label> <input type="text"
-					name="cpfAluno">
-			</div>
-			<div>
-				<label><strong>Data Nascimento:</strong></label> <input type="text"
-					name="dataNascimento">
-			</div>
-			<div>
-				<label><strong>Data Matrícula: *</strong></label> <input type="text"
-					name="dataMatricula">
-			</div>
-			<div>
-				<label><strong>Nome pai: *</strong></label> <input type="text"
-					name="nomePai">
-			</div>
-			<div>
-				<label><strong>Nome mãe: *</strong></label> <input type="text"
-					name="nomeMae">
-			</div>
-			<div>
-				<label><strong>Responsável:</strong></label> <input type="text"
-					name="responsavel">
-			</div>
-			<div>
-				<label><strong>Fone Responsável:</strong></label> <input type="text"
-					name="foneResponsavel">
-			</div>
-
-			<label><strong>Matrículado:</strong></label><input type="checkbox"
-				name="matriculado"> <br>
+			<label><strong>Ativo:</strong></label><input type="checkbox"
+				name="ativo"> <br>
 			<div>
 
 				<input id="escolaButton" type="submit" name="salvar"
-					value="Cadastrar Aluno">
+					value="Cadastrar Professor">
 			</div>
 			<div>
 				<%
