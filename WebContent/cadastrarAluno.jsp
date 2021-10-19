@@ -37,15 +37,15 @@
 					name="dataNascimento">
 			</div>
 			<div>
-				<label><strong>Data Matrícula:</strong></label> <input type="text"
+				<label><strong>Data Matrícula: *</strong></label> <input type="text"
 					name="dataMatricula">
 			</div>
 			<div>
-				<label><strong>Nome pai:</strong></label> <input type="text"
+				<label><strong>Nome pai: *</strong></label> <input type="text"
 					name="nomePai">
 			</div>
 			<div>
-				<label><strong>Nome mãe:</strong></label> <input type="text"
+				<label><strong>Nome mãe: *</strong></label> <input type="text"
 					name="nomeMae">
 			</div>
 			<div>
