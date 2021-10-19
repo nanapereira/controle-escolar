@@ -7,11 +7,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ConexaoMysql {
+	
 	private Connection connection = null;
 
 	private static final String USERNAME = "root";
 	private static final String PASSWORD = "123456";
-	private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/controle_escolar?useTimezone=true&serverTimezone=UTC";
+	private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/escola?useTimezone=true&serverTimezone=UTC";
 
 	public ConexaoMysql() throws SQLException, ClassNotFoundException {
 		Class.forName("com.mysql.cj.jdbc.Driver");
