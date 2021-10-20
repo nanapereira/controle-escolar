@@ -44,5 +44,15 @@
 		<servlet-name>cadastrarProfessor</servlet-name>
 		<url-pattern>/cadastrarProfessor</url-pattern>
 	</servlet-mapping>
+	
+				<servlet>
+		<servlet-name>consultarAluno</servlet-name>
+		<servlet-class>controller.consultarAlunoController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>consultarAluno</servlet-name>
+		<url-pattern>/consultarAluno</url-pattern>
+	</servlet-mapping>
 
 </web-app>

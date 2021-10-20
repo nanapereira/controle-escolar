@@ -18,8 +18,7 @@
 			<li><a href="cadastrarDisciplina.jsp">Disciplina</a></li>
 			<li><a href="cadastrarMatricula.jsp">Matrícula</a></li>
 			<li><a href="cadastrarProfessor.jsp">Professor</a></li>
-			<li><a href="consultar.jsp">Consultar</a></li>
-
+			<li><a href="consultarAluno.jsp">Consultar</a></li>
 		</ul>
 	</nav>
 	<main class="escolaMain">

@@ -1,12 +1,14 @@
 package dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.Aluno;
 
 public class AlunoDao {
-	
+
 	private String sql;
 	private ConexaoMysql conexao;
 
@@ -36,4 +38,30 @@ public class AlunoDao {
 		}
 	}
 
+	public ArrayList<Aluno> findByName(String nomeAluno) throws SQLException {
+		sql = "SELECT * FROM ALUNO WHERE nomeAluno LIKE '%" + nomeAluno + "%'";
+		try {
+			PreparedStatement stmt = this.conexao.getConnection().prepareStatement(sql);
+			ResultSet resultSet = stmt.executeQuery();
+			ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+			while(resultSet.next()) {
+				Aluno aluno = new Aluno(
+						resultSet.getInt("codAluno"),
+						resultSet.getString("nomeAluno"),
+						resultSet.getString("cpfAluno"),
+						resultSet.getDate("dataNascimento"),
+						resultSet.getDate("dataMatricula"),
+						resultSet.getString("nomePai"),
+						resultSet.getString("nomeMae"),
+						resultSet.getString("responsavel"),
+						resultSet.getString("foneResponsavel"),
+						resultSet.getBoolean("matriculado")
+						);		
+						alunos.add(aluno);	
+			}
+			return alunos;		
+		}catch (SQLException se) {
+			throw se;
+		}
+	}
 }

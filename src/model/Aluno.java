@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 
 import dao.AlunoDao;
@@ -32,6 +33,29 @@ public class Aluno {
 		this.responsavel = responsavel;
 		this.foneResponsavel = foneResponsavel;
 		this.matriculado = matriculado;
+	}
+
+
+
+	public Aluno(int codAluno, String nomeAluno, String cpfAluno, Date dataNascimento, Date dataMatricula,
+			String nomePai, String nomeMae, String responsavel, String foneResponsavel, boolean matriculado) {
+		super();
+		this.codAluno = codAluno;
+		this.nomeAluno = nomeAluno;
+		this.cpfAluno = cpfAluno;
+		this.dataNascimento = dataNascimento;
+		this.dataMatricula = dataMatricula;
+		this.nomePai = nomePai;
+		this.nomeMae = nomeMae;
+		this.responsavel = responsavel;
+		this.foneResponsavel = foneResponsavel;
+		this.matriculado = matriculado;
+	}
+
+
+
+	public Aluno() {
+
 	}
 
 	public int getCodAluno() {
@@ -118,8 +142,8 @@ public class Aluno {
 		// TODO implement here
 	}
 
-	public void consultarAluno() {
-		// TODO implement here
+	public ArrayList<Aluno> consultarAluno(String nomeAluno) throws ClassNotFoundException, SQLException {
+		return new AlunoDao().findByName(nomeAluno);
 	}
 
 	public void alterarStatusAluno() {
