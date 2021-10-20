@@ -4,7 +4,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 import model.Aluno;
 
 public class AlunoDao {
@@ -44,23 +43,16 @@ public class AlunoDao {
 			PreparedStatement stmt = this.conexao.getConnection().prepareStatement(sql);
 			ResultSet resultSet = stmt.executeQuery();
 			ArrayList<Aluno> alunos = new ArrayList<Aluno>();
-			while(resultSet.next()) {
-				Aluno aluno = new Aluno(
-						resultSet.getInt("codAluno"),
-						resultSet.getString("nomeAluno"),
-						resultSet.getString("cpfAluno"),
-						resultSet.getDate("dataNascimento"),
-						resultSet.getDate("dataMatricula"),
-						resultSet.getString("nomePai"),
-						resultSet.getString("nomeMae"),
-						resultSet.getString("responsavel"),
-						resultSet.getString("foneResponsavel"),
-						resultSet.getBoolean("matriculado")
-						);		
-						alunos.add(aluno);	
+			while (resultSet.next()) {
+				Aluno aluno = new Aluno(resultSet.getInt("codAluno"), resultSet.getString("nomeAluno"),
+						resultSet.getString("cpfAluno"), resultSet.getDate("dataNascimento"),
+						resultSet.getDate("dataMatricula"), resultSet.getString("nomePai"),
+						resultSet.getString("nomeMae"), resultSet.getString("responsavel"),
+						resultSet.getString("foneResponsavel"), resultSet.getBoolean("matriculado"));
+				alunos.add(aluno);
 			}
-			return alunos;		
-		}catch (SQLException se) {
+			return alunos;
+		} catch (SQLException se) {
 			throw se;
 		}
 	}

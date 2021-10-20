@@ -19,8 +19,6 @@ public class Aluno {
 	public String foneResponsavel;
 	public boolean matriculado;
 
-
-
 	public Aluno(String nomeAluno, String cpfAluno, Date dataNascimento, Date dataMatricula, String nomePai,
 			String nomeMae, String responsavel, String foneResponsavel, boolean matriculado) {
 		super();
@@ -34,8 +32,6 @@ public class Aluno {
 		this.foneResponsavel = foneResponsavel;
 		this.matriculado = matriculado;
 	}
-
-
 
 	public Aluno(int codAluno, String nomeAluno, String cpfAluno, Date dataNascimento, Date dataMatricula,
 			String nomePai, String nomeMae, String responsavel, String foneResponsavel, boolean matriculado) {
@@ -51,8 +47,6 @@ public class Aluno {
 		this.foneResponsavel = foneResponsavel;
 		this.matriculado = matriculado;
 	}
-
-
 
 	public Aluno() {
 
@@ -139,7 +133,6 @@ public class Aluno {
 	}
 
 	public void alterarAluno() {
-		// TODO implement here
 	}
 
 	public ArrayList<Aluno> consultarAluno(String nomeAluno) throws ClassNotFoundException, SQLException {

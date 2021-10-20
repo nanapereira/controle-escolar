@@ -34,79 +34,65 @@
 				<input id="escolaButton" type="submit" name="salvar"
 					value="Consultar Aluno">
 			</div>
-		<%
-		if (request.getAttribute("alunos") != null) {
-			List<?> alunos = (List<?>) request.getAttribute("alunos");
-			for (int contador = 0; contador <= (alunos.size() - 1); contador++) {
-				Aluno aluno = (Aluno) alunos.get(contador);
-		%>
-		<form action="modificarAluno" method="post" class="escolaForm">
-			<div class="escolaDivMother">
-				<div class="escolaDivItem">
-					<div class="escolaColumn">
-						<span style="font-weight: bold">Código:</span> <span>
-							<%
-							out.print(aluno.getCodAluno());
-							%>
-						</span> <input type="hidden" name="id"
-							value="<%out.print(aluno.getCodAluno());%>">
-					</div>
+			<%
+			if (request.getAttribute("alunos") != null) {
+				List<?> alunos = (List<?>) request.getAttribute("alunos");
+				for (int contador = 0; contador <= (alunos.size() - 1); contador++) {
+					Aluno aluno = (Aluno) alunos.get(contador);
+			%>
+			<form action="alterarAluno" method="post" class="escolaForm">
+				<div class="escolaDivMother">
+					<div class="escolaDivItem">
+						<div class="escolaColumn">
+							<span style="font-weight: bold">Código:</span> <span> <%
+ out.print(aluno.getCodAluno());
+ %>
+							</span> <input type="hidden" name="id"
+								value="<%out.print(aluno.getCodAluno());%>">
+						</div>
 
-					<div class="escolaColumn">
-						<span style="font-weight: bold">Nome:</span> <span> <%
+						<div class="escolaColumn">
+							<span style="font-weight: bold">Nome:</span> <span> <%
  out.print(aluno.getNomeAluno());
  %></span>
-					</div>
+						</div>
 
 						<div class="escolaColumn">
-						<span style="font-weight: bold">Responsável:</span> <span>
-							<%
-							out.print(aluno.getResponsavel());
-							%>
-						</span>
-					</div>
-					<div class="escolaColumn">
-						<span style="font-weight: bold">Fone:</span> <span>
-							<%
-							out.print(aluno.getFoneResponsavel());
-							%>
-						</span>
-					</div>
-					<div class="escolaColumn">
-						<span style="font-weight: bold">Matriculado:</span> <span>
-							<%
-							out.print(aluno.isMatriculado());
-							%>
-						</span>
-					</div>
-
-					<div class="escolaColumn">
-						<input id="escolaColumnButton" type="submit" name="alterar"
-							value="Alterar">
+							<span style="font-weight: bold">Responsável:</span> <span>
+								<%
+								out.print(aluno.getResponsavel());
+								%>
+							</span>
+						</div>
 						<div class="escolaColumn">
-							<input id="escolaColumnButton" type="submit" name="excluir"
-								value="Excluír">
+							<span style="font-weight: bold">Fone:</span> <span> <%
+ out.print(aluno.getFoneResponsavel());
+ %>
+							</span>
+						</div>
+						<div class="escolaColumn">
+							<span style="font-weight: bold">Matriculado:</span> <span>
+								<%
+								out.print(aluno.isMatriculado());
+								%>
+							</span>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div>
-				<%
-				String mensagem = (String) request.getAttribute("mensagem");
-				if (mensagem != null) {
-					out.print(mensagem);
-				}
-				%>
-			</div>
-		</form>
+				<div>
+					<%
+					String mensagem = (String) request.getAttribute("mensagem");
+					if (mensagem != null) {
+						out.print(mensagem);
+					}
+					%>
+				</div>
+			</form>
 		</form>
 		<%
 		}
 		}
 		%>
 	</main>
-	<%
-	out.print("Teste");
-	%>
 </body>
 </html>

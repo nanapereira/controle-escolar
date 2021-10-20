@@ -24,8 +24,8 @@
 		<servlet-name>cadastrarDisciplina</servlet-name>
 		<url-pattern>/cadastrarDisciplina</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>cadastrarMatricula</servlet-name>
 		<servlet-class>controller.cadastrarMatriculaController</servlet-class>
 	</servlet>
@@ -34,8 +34,8 @@
 		<servlet-name>cadastrarMatricula</servlet-name>
 		<url-pattern>/cadastrarMatricula</url-pattern>
 	</servlet-mapping>
-	
-			<servlet>
+
+	<servlet>
 		<servlet-name>cadastrarProfessor</servlet-name>
 		<servlet-class>controller.cadastrarProfessorController</servlet-class>
 	</servlet>
@@ -44,8 +44,8 @@
 		<servlet-name>cadastrarProfessor</servlet-name>
 		<url-pattern>/cadastrarProfessor</url-pattern>
 	</servlet-mapping>
-	
-				<servlet>
+
+	<servlet>
 		<servlet-name>consultarAluno</servlet-name>
 		<servlet-class>controller.consultarAlunoController</servlet-class>
 	</servlet>
@@ -53,16 +53,6 @@
 	<servlet-mapping>
 		<servlet-name>consultarAluno</servlet-name>
 		<url-pattern>/consultarAluno</url-pattern>
-	</servlet-mapping>
-	
-			<servlet>
-		<servlet-name>modificarAluno</servlet-name>
-		<servlet-class>banana.controller.modificarAlunoController</servlet-class>
-	</servlet>
-	
-		<servlet-mapping>
-		<servlet-name>modificarAluno</servlet-name>
-		<url-pattern>/modificarAluno</url-pattern>
 	</servlet-mapping>
 
 </web-app>
