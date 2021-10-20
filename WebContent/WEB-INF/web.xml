@@ -54,5 +54,15 @@
 		<servlet-name>consultarAluno</servlet-name>
 		<url-pattern>/consultarAluno</url-pattern>
 	</servlet-mapping>
+	
+			<servlet>
+		<servlet-name>modificarAluno</servlet-name>
+		<servlet-class>banana.controller.modificarAlunoController</servlet-class>
+	</servlet>
+	
+		<servlet-mapping>
+		<servlet-name>modificarAluno</servlet-name>
+		<url-pattern>/modificarAluno</url-pattern>
+	</servlet-mapping>
 
 </web-app>
